@@ -188,6 +188,19 @@ namespace TankGL
             gl.BindTexture(OpenGL.GL_TEXTURE_2D, TankGL_Form.textures[0]);
             drawer.DrawParallelepiped(gl, 0.792f, 0.276f, 0.0f, 0.124f, 0.056f, 0.744f);
 
+            gl.BindTexture(OpenGL.GL_TEXTURE_2D, TankGL_Form.textures[19]);
+            gl.Begin(OpenGL.GL_QUADS);
+            gl.Normal(0.0f, 1.0f, 0.0f);
+            gl.TexCoord(0.0f, 0.0f);
+            gl.Vertex(0.792f, 0.276f + 0.0561f, 0.0f);
+            gl.TexCoord(1.0f, 0.0f);
+            gl.Vertex(0.792f, 0.276f + 0.0561f, 0.0f + 0.744f);
+            gl.TexCoord(1.0f, 1.0f);
+            gl.Vertex(0.792f + 0.124f, 0.276f + 0.0561f, 0.0f + 0.744f);
+            gl.TexCoord(0.0f, 1.0f);
+            gl.Vertex(0.792f + 0.124f, 0.276f + 0.0561f, 0.0f);
+            gl.End();
+
             //box
             gl.BindTexture(OpenGL.GL_TEXTURE_2D, TankGL_Form.textures[14]);
             drawer.DrawParallelepiped(gl, 0.112f, 0.232f, 0.512f, 0.1f, 0.128f, 0.192f);

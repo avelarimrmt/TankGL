@@ -42,9 +42,9 @@ namespace TankGL
 
             gl.Material(OpenGL.GL_FRONT_AND_BACK, OpenGL.GL_DIFFUSE, white);
 
-            textures = new uint[19];
+            textures = new uint[20];
             gl.Enable(OpenGL.GL_TEXTURE_2D);
-            gl.GenTextures(19, textures);
+            gl.GenTextures(20, textures);
 
             GenerateTexture(0, @"..\..\textures\hull.bmp");
             GenerateTexture(1, @"..\..\textures\hull_lower.bmp");
@@ -65,6 +65,7 @@ namespace TankGL
             GenerateTexture(16, @"..\..\textures\gun.bmp");
             GenerateTexture(17, @"..\..\textures\muzzle_brake.bmp");
             GenerateTexture(18, @"..\..\textures\muzzle_brake_1.bmp");
+            GenerateTexture(19, @"..\..\textures\spare_track.bmp");
         }
 
         private void GenerateTexture(int idTexture, string filePath)
