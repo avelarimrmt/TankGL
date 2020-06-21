@@ -94,7 +94,9 @@ namespace TankGL
             gl.LoadIdentity();
 
             gl.Rotate(rotation, 0.0f, 1.0f, 0.0f);
-
+            //gl.Rotate(90.0, 0.0f, 1.0f, 0.0f);  // front elevation
+            //gl.Rotate(-90.0, 0.0f, 1.0f, 0.0f); // back elevation
+            //gl.Rotate(-90, 1.0f, 0.0f, 0.0f);  // bottom elevation
             var tank = new DrawTank();
             tank.DrawAllParts(gl);
 
@@ -110,7 +112,7 @@ namespace TankGL
 
             gl.LoadIdentity();
             gl.Perspective(60.0f, (double)Width / (double)Height, 0.01, 100.0);
-            gl.LookAt(0, 1.5, 3, 0, 1, 0, 0, 1, 0);
+            gl.LookAt(0.75, 1.2, 2.2, 0, 0, 0, 0, 1, 0);
 
             gl.MatrixMode(OpenGL.GL_MODELVIEW);
         }
