@@ -24,15 +24,20 @@ namespace TankGL
             var gl = openGLControl1.OpenGL;
             gl.ClearColor(0.6f, 0.6f, 0.6f, 0.1f);
 
-            gl.Light(OpenGL.GL_LIGHT1, OpenGL.GL_DIFFUSE, white);
-            gl.Light(OpenGL.GL_LIGHT1, OpenGL.GL_AMBIENT, black);
-            gl.LightModel(OpenGL.GL_LIGHT_MODEL_AMBIENT, black);
-            gl.Enable(OpenGL.GL_LIGHT1);
             gl.Enable(OpenGL.GL_LIGHTING);
+            gl.Light(OpenGL.GL_LIGHT0, OpenGL.GL_AMBIENT, white);
+            gl.Light(OpenGL.GL_LIGHT0, OpenGL.GL_DIFFUSE, white);
+            gl.Light(OpenGL.GL_LIGHT0, OpenGL.GL_POSITION, new[] { 1.0f, 0.0f, 0.0f });
+            gl.Enable(OpenGL.GL_LIGHT0);
 
-            gl.Light(OpenGL.GL_LIGHT2, OpenGL.GL_AMBIENT, new[] { 1.0f, 1.0f, 1.0f });
-            gl.Light(OpenGL.GL_LIGHT2, OpenGL.GL_DIFFUSE, new[] { 1.0f, 1.0f, 1.0f });
-            gl.Light(OpenGL.GL_LIGHT2, OpenGL.GL_POSITION, new[] { 0.0f, 1.0f, 0.0f });
+            gl.Light(OpenGL.GL_LIGHT1, OpenGL.GL_AMBIENT, white);
+            gl.Light(OpenGL.GL_LIGHT1, OpenGL.GL_DIFFUSE, white);
+            gl.Light(OpenGL.GL_LIGHT1, OpenGL.GL_POSITION, new[] { 0.0f, 1.0f, 0.0f });
+            gl.Enable(OpenGL.GL_LIGHT1);
+
+            gl.Light(OpenGL.GL_LIGHT2, OpenGL.GL_AMBIENT, white);
+            gl.Light(OpenGL.GL_LIGHT2, OpenGL.GL_DIFFUSE, white);
+            gl.Light(OpenGL.GL_LIGHT2, OpenGL.GL_POSITION, new[] { 0.0f, 0.0f, 1.0f });
             gl.Enable(OpenGL.GL_LIGHT2);
 
             gl.Material(OpenGL.GL_FRONT_AND_BACK, OpenGL.GL_DIFFUSE, white);
